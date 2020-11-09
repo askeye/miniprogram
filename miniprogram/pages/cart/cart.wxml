@@ -38,9 +38,9 @@
         <view class="add_item">
           <view class="cake_item" wx:for="{{ads}}" wx:key="index" bindtap="down" data-id="{{item.id}}">
             <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" />
-            <text class="cake_title1">￥{{ item.title }}</text>
+            <text class="cake_title1">{{ item.title }}</text>
             <view class="cake_desc">
-              <text class="cake_price">{{ item.price }}</text>
+              <text class="cake_price">￥{{ item.price }}</text>
             </view>
           </view>
         </view>
