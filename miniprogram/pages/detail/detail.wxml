@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+
+  <!-- banner -->
+  <swiper style="height:600rpx;width:100%;" autoplay="2000" indicator-dots="true" indicator-color="white"
+    indicator-active-color="#3c2314" circular="true" style="height:536rpx">
+    <swiper-item wx:for="{{banner}}" wx:key="index" style="display:block;width:100%;height:auto">
+      <image src="{{item}}" style="display:block;width:100%;height:auto" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="det_content">
+    <view class="info">
+      <view class="info_h3">{{ title }}</view>
+      <view class="size_box">16厘米 | 更多规格</view>
+    </view>
+    <view class="det_fix">
+      <view class="midu">
+        <text>密度</text>
+        <text class="i_box">
+          <text class="['det_nor', {{ index < zd?'activea':'' }}]" wx:for="{{5}}" wx:key="index"></text>
+        </text>
+      </view>
+      <view class="zhidu">
+        <text>芝度</text>
+        <text class="i_box">
+          <text class="['det_nor', {{ index < md?'activea':'' }}]" wx:for="{{5}}" wx:key="index"></text>
+        </text>
+      </view>
+      <view class="det_info">16厘米 | 适合3-6人食用 ｜ +6套餐具</view>
+      <view class="det_price">{{price}}</view>
+    </view>
+  </view>
+  <view class="img_box_wrap" style="margin-bottom:86rpx">
+    <view class="imgbox" wx:for="{{img_box}}" wx:key="index" style="font-size:0;">
+      <image src="{{item}}" alt="" style="display:block;width:100%;height:auto" mode="widthFix" />
+    </view>
+  </view>
+  <view class="det_Cart">
+    <text bindtap="add_cart" class="det_Cart_span" data-id="{{id}}">加入购物车</text>
+  </view>
+  <van-toast id="van-toast" />
+</view>

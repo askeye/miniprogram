@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Bottom":"../../components/Bottom/Bottom"
+  }
+}

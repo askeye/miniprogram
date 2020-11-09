@@ -1,0 +1,8 @@
+/* pages/send/send.wxss */
+.send_box{
+  width: 100%;
+}
+.send_box_img{
+  display: block;
+  width:100%;
+}

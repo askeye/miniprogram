@@ -1,0 +1,81 @@
+/* pages/detail/detail.wxss */
+.detail {
+  font-size: 24rpx;
+  color: #3c2314;
+  letter-spacing: 1.5rpx;
+}
+.det_content {
+  padding: 56rpx 42rpx 0 42rpx;
+}
+.info_h3 {
+  display: inline-block;
+  font-size: 40rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+.size_box {
+  border: 1px solid #e7e7e7;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  float: right;
+}
+.det_fix {
+  padding-top: 20rpx;
+}
+.zhidu,
+.midu {
+  margin-right: 20rpx;
+  padding-bottom: 10rpx;
+}
+.det_nor.activea {
+  background-image: url("https://m.ebeecake.com/dist/images/yellow_oval_1.png");
+}
+.det_nor {
+  background-image: url("https://m.ebeecake.com/dist/images/gray_oval_1.png");
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  background-size: 18rpx;
+  margin-right: 6rpx;
+}
+.i_box {
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.det_info {
+  margin-top: 42rpx;
+  letter-spacing: 2rpx;
+}
+.det_price {
+  font-size: 40rpx;
+  color: #aa8764;
+  margin-top: 42rpx;
+  letter-spacing: 4rpx;
+}
+.det_Cart {
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  padding-top: 12rpx;
+  height: 86rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+.det_Cart_span {
+  position: absolute;
+  display: block;
+  width: 88%;
+  line-height: 70rpx;
+  height: 70rpx;
+  background-color: #3c2314;
+  color: #fff;
+  font-size: 24rpx;
+  letter-spacing: 2.6rpx;
+  left: 6%;
+  right: 6%;
+  z-index: 10;
+}

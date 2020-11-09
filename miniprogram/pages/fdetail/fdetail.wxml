@@ -1,0 +1,11 @@
+<view class="detail_food">
+    <view class="fo_det_item" wx:for="{{lists}}" wx:key="index">
+      <image src="{{item.img}}" alt="" class="fo_det_img" mode="widthFix"/>
+      <view class="fo_det_title">{{ item.content_title }}</view>
+      <view style="margin: 24rpx 32rpx 0 32rpx;">
+        <rich-text nodes="{{item.content}}" class="content"></rich-text>
+      </view>
+    </view>
+    <!-- <Backtop /> -->
+    <Bottom />
+  </view>

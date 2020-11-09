@@ -1,0 +1,6 @@
+<view class="send_wrap">
+  <view class="send_box" wx:for="{{imgs}}" wx:key="index">
+    <image class="send_box_img" src="{{item.img}}" alt="" mode="widthFix"/>
+  </view>
+  <Bottom />
+</view>

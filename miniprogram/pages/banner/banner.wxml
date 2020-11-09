@@ -1,0 +1,6 @@
+<view >  
+  <view class="item" wx:for="{{imgbox}}" wx:key="index" style="font-size:0">
+  <image src="{{item}}" class="img" mode="widthFix" style="display:block"></image>
+</view>
+<Bottom></Bottom>
+</view>

@@ -1,0 +1,3 @@
+.van-toast__text{
+  font-size: 30rpx;
+}

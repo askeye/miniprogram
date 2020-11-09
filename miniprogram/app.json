@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/cake/cake",
+    "pages/banner/banner",
+    "pages/center/center",
+    "pages/fdetail/fdetail",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "ebeecake",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index1.png",
+        "selectedIconPath": "images/index2.png"
+      },
+      {
+        "pagePath": "pages/cake/cake",
+        "text": "蛋糕",
+        "iconPath": "images/cake1.png",
+        "selectedIconPath": "images/cake2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/cart1.png",
+        "selectedIconPath": "images/cart2.png"
+      },      
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "images/center.png",
+        "selectedIconPath": "images/center2.png"
+      }
+    ],
+    "color": "#3c2314",
+    "selectedColor": "#c8b49b"
+  },
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index"
+  }
+
+
+}

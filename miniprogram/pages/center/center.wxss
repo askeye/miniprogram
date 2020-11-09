@@ -1,0 +1,58 @@
+.center{
+  font-size: 24rpx;
+  color: rgb(60, 35, 20);
+}
+.cen_top{
+  width: 100%;
+  height: 197rpx;
+  box-sizing: border-box;
+  padding-left: 42rpx;
+  background: 100%;
+  background-image: url('https://m.ebeecake.com/dist/images/personal.png');
+}
+.name{
+  /* padding-top:36rpx; */
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.eb{
+  padding-top:36rpx;
+}
+.cen_box{
+ display: flex;
+ flex-wrap: wrap;
+}
+.cen_item{
+ width: 33.33%;
+ text-align: center;
+ padding: 36rpx 0;
+}
+.cen_item_img{
+ display: block;
+ width:60rpx;
+ height: 60rpx;
+ margin: auto;
+}
+.cen_item_p{
+ margin-top: 16rpx;
+}
+.quit{
+ height: 90rpx;
+ line-height: 90rpx;
+ margin-top: 150rpx;
+ text-align: center;
+ font-weight: bold;
+ letter-spacing: 2.6rpx;
+}
+.img_box,.right_box{
+  display: inline-block;
+  vertical-align: middle;
+}
+.img_box{
+  margin-right: 40rpx;
+}
+.imgg{
+  display: block;
+  width: 160rpx;
+  margin-top: 18rpx;
+}

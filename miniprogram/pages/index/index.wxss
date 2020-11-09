@@ -1,0 +1,134 @@
+/* 授权框样式 */
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+/* 首页样式 */
+.container{
+  letter-spacing: 1.5rpx;
+}
+.banner_img{
+  width: 100%;
+  height: 750rpx;
+}
+.title {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  color: #3c2314;
+  padding-left: 42rpx;
+  font-weight: bold;
+  position: relative;
+  padding: 30rpx 0;
+}
+.rec {
+  vertical-align: middle;
+  margin-left: 42rpx;
+}
+.title_img {
+  width: 56rpx;
+  height: 56rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.goods {
+  overflow-x: auto;
+  width: 100%;
+  /* height: 1.5rem; */
+  text-align: center;
+  display: flex;
+  padding-bottom: 40rpx;
+}
+.goods::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.goods_item {
+  width: 326rpx;
+}
+.goods_img {
+  width: 326rpx;
+  height: 234rpx;
+}
+.goods_title {
+  font-size: 24rpx;
+  color: #3c2314;
+}
+.goods_price {
+  color: #aa8764;
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.item_img {
+  width: 312rpx;
+  height: 312rpx;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 21rpx;
+}
+.item {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 21rpx 45rpx 21rpx;
+  position: relative;
+}
+.item_desc {
+  font-size: 24rpx;
+  color: #3c2314;
+  letter-spacing: 1.5rpx;
+  margin-top: 36rpx;
+  margin-bottom: 4rpx;
+}
+.item_title {
+  width: 224rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  background-color: #fff;
+  color: #aa8764;
+  border: 1px solid #e7e7e7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 278rpx;
+  font-size: 24rpx;
+}
+.more {
+  font-weight: normal;
+  position: absolute;
+  right: 20rpx;
+  vertical-align: middle;
+  color: #3c2314;
+  top: 32rpx;
+}

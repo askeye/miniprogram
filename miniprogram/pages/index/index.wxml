@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="wrap">
+  <view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='https://www.ebeecake.com/dist/images/row_tit1.png'></image>
+        </view>
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+  <view class="container" wx:else>
+  <!-- 轮播区域 -->
+  <swiper class="banner" autoplay="3000" indicator-dots="true" indicator-color="white" indicator-active-color="#3c2314"
+    circular="true" style="height:750rpx">
+    <swiper-item class="my-swipe" wx:for="{{banners}}" bindtap="banne" data-id="{{item.id}}" wx:key="index">
+      <image src="{{item.img}}" class="banner_img" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 蛋糕推荐 -->
+  <view class="recommend">
+    <view class="title">
+      <text class="rec">蛋糕推荐</text>
+      <image src="http://m.ebeecake.com/dist/images/ico_3.png" alt="" class="title_img" />
+    </view>
+    <view class="goods">
+      <view class="goods_item" wx:for="{{recommonds}}" wx:key="index" bindtap="go_detail" data-id="{{item.id}}">
+        <image src="{{item.url}}" alt="" class="goods_img" />
+        <view class="goods_title">{{ item.title }}</view>
+        <view class="goods_price">{{ item.price }}起</view>
+      </view>
+    </view>
+  </view>
+    <!-- 庆生蛋糕 -->
+    <view class="recommend">
+    <view class="title">
+      <image
+          src="https://m.ebeecake.com/dist/images/ico_1.png"
+          alt=""
+          class="title_img"
+          style="margin-left:42rpx"
+        />
+      <text class="rec" style="margin-left:20rpx">庆生蛋糕</text>
+    </view>
+    <view class="goods">
+      <view class="goods_item" wx:for="{{birs}}" wx:key="index" bindtap="go_detail" data-id="{{item.id}}">
+        <image src="{{item.url}}" alt="" class="goods_img" />
+        <view class="goods_title">{{ item.title }}</view>
+        <view class="goods_price">{{ item.price }}起</view>
+      </view>
+    </view>
+  </view>
+  <!-- 精选食材 -->
+  <view class="recommend">
+      <view class="title" >
+        <image
+          src="https://m.ebeecake.com/dist/images/ico_2.png"
+          alt=""
+          class="title_img"
+          style="padding-left: 0.21rem"
+        />
+        <text class="rec" style="margin-left:20rpx">精选食材</text>
+        <navigator url='../fdetail/fdetail' class="more">更多</navigator>
+      </view>
+      <view class="list">
+        <view class="item" wx:for="{{foods}}" wx:key="index" bindtap="go_food">
+          <image src="{{item.img}}" alt="" class="item_img" />
+          <view class="item_title">{{ item.title }}</view>
+          <view class="item_desc">{{ item.desc }}</view>
+        </view>
+      </view>
+  </view>
+  <Bottom></Bottom>
+</view>
+</view>

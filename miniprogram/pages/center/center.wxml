@@ -1,0 +1,34 @@
+<view class="center">
+  <view class="cen_top">
+    <view class="img_box">
+      <image src="{{img}}" class="imgg" mode="widthFix"></image>
+    </view>
+    <view class="right_box">
+      <view class="name">
+      {{name}}
+    </view>
+    <view class="eb">
+      <text>预存余额￥</text>
+      <text style="padding-right:0.28rem">0</text>
+      <text>预存余额￥</text>
+      <text>0</text>
+    </view>
+    </view>  
+  </view>
+  <view class="cen_bottom">
+    <view class="cen_box">
+      <view class="cen_item" bindtap="order">
+        <image src="https://m.ebeecake.com/dist/images/ico_order.png" 
+        class="cen_item_img"
+        mode="widthFix" alt="" />
+          <view class="cen_item_p">我的订单</view>
+      </view>
+      <view class="cen_item" bindtap="address">
+        <image src="https://m.ebeecake.com/dist/images/ico_addr.png"  class="cen_item_img" mode="widthFix" alt="" />
+          <view  class="cen_item_p">地址管理</view>
+      </view>
+    </view>
+  </view>
+  <Bottom />
+  <van-toast id="van-toast" />
+  </view>

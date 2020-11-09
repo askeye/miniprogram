@@ -1,0 +1,30 @@
+/* components/Bottom/Bottom.wxss */
+.footer {
+  margin-top: 100rpx;
+  padding-top: 90rpx;
+  padding-left: 42rpx;
+  letter-spacing: 1.5rpx;
+  background-image: url("https://m.ebeecake.com/dist/images/footer.png");
+  height: 254rpx;
+  background-size: 100% 434rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+.footer .logo1 {
+  width: 210rpx;
+  height: 34rpx;
+}
+.footer .tip {
+  margin-top: 24rpx;
+  color: #aaa;
+}
+.footer .tip a {
+  color: rgb(60, 35, 20);
+  letter-spacing: 2.6rpx;
+}
+.footer .compinfo {
+  margin-top: 16rpx;
+  color: #aaa;
+  /* letter-spacing: ; */
+  line-height:32rpx;
+}

@@ -1,0 +1,51 @@
+<view class="cart">
+  <view class="cart">
+    <view class="cart_list_wrap" wx:if="{{lists.length > 0}}">
+      <view class="cart_list">
+        <view class="cart_item" wx:for="{{lists}}" wx:key="index" style="border-bottom:1px solid #f0f0f0">
+          <van-swipe-cell right-width="{{ 65 }}">
+            <van-card num="{{item.num}}" price="{{item.price}}" desc="适合3-6人使用|+6套餐具" title="{{item.title}}"
+              thumb="{{ item.url }}" />
+            <view slot="right" bindtap="del" style="margin-top: 40px;letter-spacing: 2px;font-weight: 400;width:65px"  data-id="{{item.id}}">删除</view>
+          </van-swipe-cell>
+        </view>
+      </view>
+      <view class="cart_info">
+        <van-cell-group>
+          <van-cell title="配送" />
+          <van-field placeholder-style="font-size:26rpx" value="{{receive_name}}" bind:change="onChange" label="收货人"
+            placeholder="不是本人收货时请填写" />
+          <van-field placeholder-style="font-size:26rpx" value="{{receive_phone}}" bind:blur="onTel" label="收货手机"
+            placeholder="不是本人收货时请填写" />
+          <van-field placeholder-style="font-size:26rpx" value="{{adress}}" bind:blur="onAddress" label="详细地址"
+            placeholder="请填写详细地址" />
+        </van-cell-group>
+      </view>
+      <van-submit-bar id="cart_submit" label="实付：" :price="sum * 100" decimal-length:0 button-text="下单"
+        button-color="#3C2314" bind:submit="submit" />
+      <van-toast id="van-toast" />
+    </view>
+    <view class="cart_none" wx:else>
+      <view class="cart_none_title">您的购物袋中还没有蛋糕</view>
+      <text class="cart_none_a" bindtap="index">返回首页</text>
+      <text class="cart_none_a" bindtap="buy">选购蛋糕>></text>
+
+      <view class="cart_add" style="margin-top: 0.5rem">
+        <view class="cart_line">
+          <text class="ad_tit">为您推荐</text>
+          <view class="ad_line"></view>
+        </view>
+        <view class="add_item">
+          <view class="cake_item" wx:for="{{ads}}" wx:key="index" bindtap="down" data-id="{{item.id}}">
+            <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" />
+            <text class="cake_title1">￥{{ item.title }}</text>
+            <view class="cake_desc">
+              <text class="cake_price">{{ item.price }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

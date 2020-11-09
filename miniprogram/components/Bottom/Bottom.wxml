@@ -1,0 +1,12 @@
+<view class="footer">
+  <view class="logo1">
+    <image src="https://m.ebeecake.com/dist/images/footer_logo.png" alt="ebeecake小蜜蜂蛋糕"
+      style="width:210rpx;height:34rpx;" />
+  </view>
+  <view class="tip">
+    <text href="tel:4006106798">4006 106 798 | 北京六环内免费配送</text>
+  </view>
+  <view class="compinfo">
+    <text>Copyright©2020 ebeecake 小蜜蜂蛋糕\n易贝可（北京）食品有限公司</text>
+  </view>
+</view>

@@ -1,0 +1,138 @@
+<view class="cake">
+  <!-- 商品栏 -->
+  <view class="wrap" style="height:1334rpx">
+    <view class="menu">
+    <view class="menu_item" wx:for="{{menus}}" wx:key="index" bindtap="goAnchor" data-id="{{index}}">
+      <image src="{{item.img}}" alt="" class="menu_img" />
+      <text class="menu_name">{{ item.name }}</text>
+    </view>
+  </view>
+    <scroll-view style="height:100%"  scroll-into-view='{{to_scroll}}' scroll-with-animation='true' scroll-y='true'>
+    <!--奶油蛋糕 -->
+    <view class="cate" id="case0">
+      <view class="cake_title">
+        <view class="cake_title_h2">奶油蛋糕</view>
+        <view class="cake_title_p">选用法国铁塔乳脂奶油</view>
+      </view>
+      <view class="cakes">
+        <view class="cake_item" wx:for="{{creams}}" wx:key="index">
+          <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
+          <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
+          <view class="cake_desc">
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">￥{{ item.price }}</text>
+            <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--巧克力蛋糕 -->
+    <view class="cate" id="case1">
+      <view class="cake_title">
+        <view class="cake_title_h2">巧克力蛋糕</view>
+        <view class="cake_title_p">采用可可脂含量62%的法芙娜巧克力</view>
+      </view>
+      <view class="cakes">
+        <view class="cake_item" wx:for="{{chocolates}}" wx:key="index">
+          <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
+          <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
+          <view class="cake_desc">
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--冰激凌蛋糕 -->
+    <view class="cate" id="case2">
+      <view class="cake_title">
+        <view class="cake_title_h2">冰激凌蛋糕</view>
+        <view class="cake_title_p">天然冰爽 意大利冰激凌</view>
+      </view>
+      <view class="cakes">
+        <view class="cake_item" wx:for="{{ice}}" wx:key="index">
+          <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
+          <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
+          <view class="cake_desc">
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--芝士蛋糕 -->
+    <view class="cate" id="case3">
+      <view class="cake_title">
+        <view class="cake_title_h2">芝士蛋糕</view>
+        <view class="cake_title_p">皂感十足黄金乳酪</view>
+      </view>
+      <view class="cakes">
+        <view class="cake_item" wx:for="{{cheese}}" wx:key="index">
+          <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
+          <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
+          <view class="cake_desc">
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 咖啡下午茶 -->
+    <view class="cate" id="case4">
+      <view class="cake_title">
+        <view class="cake_title_h2">咖啡下午茶</view>
+        <view class="cake_title_p">单笔购买不满99元收运费</view>
+      </view>
+      <view class="cakes">
+        <view class="cake_item" wx:for="{{tea}}" wx:key="index">
+          <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
+          <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
+          <view class="cake_desc">
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+    <!-- 弹出层 -->
+    <van-popup show="{{show}}" position="bottom" closeable bind:close="onClose">
+      <view class="cover" wx:for="{{good}}" wx:key="index">
+        <view class="cov_wrap">
+          <view class="cake_tit">{{ item.title }}</view>
+        </view>
+        <view class="cake_desc1">
+          <image src="http://images.ebeecake.com/img_c/size/f16.png" alt="" class="cake_desc1_img" />
+          <view class="cak_right">
+            <view class="cak_item">
+              <image src="https://images.ebeecake.com/img_c/size/sizes25.png" alt="" class="cak_item_img" />
+              <text>1.5磅(≥700克)</text>
+            </view>
+            <view class="cak_item">
+              <image class="cak_item_img" src="https://images.ebeecake.com/img_c/size/sizes25.png" alt="" />
+              <text>1.5磅(≥700克)</text>
+            </view>
+            <view class="cak_item">
+              <image src="https://images.ebeecake.com/img_c/size/sizes25.png" class="cak_item_img" alt="" />
+              <text>1.5磅(≥700克)</text>
+            </view>
+            <view class="cak_item">
+              <image src="https://images.ebeecake.com/img_c/size/sizes25.png" class="cak_item_img" alt="" />
+              <text>1.5磅(≥700克)</text>
+            </view>
+            <view class="cak_price">
+              {{ item.price }}/<text style="font-size: 26rpx;">16cm</text>
+            </view>
+          </view>
+        </view>
+        <view class="cake_size">
+          <view class="item actives">16厘米</view>
+        </view>
+        <view class="cak_btn_wrap">
+          <text class="add_cart activess" bindtap="add_cart" data-id="{{item.id}}">加入购物袋</text>
+          <text class="cake_det" bindtap="down" data-id="{{item.id}}">查看蛋糕详情</text>
+        </view>
+      </view>
+    </van-popup>
+    <van-toast id="van-toast" />
+  </view>
+</view>
