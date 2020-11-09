@@ -36,7 +36,7 @@
           <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
           <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
           <view class="cake_desc">
-            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">￥{{ item.price }}</text>
             <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
           </view>
         </view>
@@ -53,7 +53,7 @@
           <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
           <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
           <view class="cake_desc">
-            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">￥{{ item.price }}</text>
             <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
           </view>
         </view>
@@ -70,7 +70,7 @@
           <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
           <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
           <view class="cake_desc">
-            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">￥{{ item.price }}</text>
             <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
           </view>
         </view>
@@ -87,7 +87,7 @@
           <image src="{{item.url}}" alt="" mode="widthFix" class="cake_img" bindtap="down" data-id="{{item.id}}" />
           <view class="cake_title1" bindtap="down" data-id="{{item.id}}">{{ item.title }}</view>
           <view class="cake_desc">
-            <text class="cake_price" bindtap="down" data-id="{{item.id}}">{{ item.price }}</text>
+            <text class="cake_price" bindtap="down" data-id="{{item.id}}">￥{{ item.price }}</text>
             <text class="add" bindtap="add" data-id="{{item.id}}">+</text>
           </view>
         </view>
